@@ -1,0 +1,33 @@
+amvbinary_file 	340
+globals 	4
+STRING_ARRAY
+----------------------------------------------------------
+NUMBER_ARRAY 2
+----------------------------------------------------------
+0		10
+1		1
+FUNCTION_ARRAY
+----------------------------------------------------------
+LIBFUNCS_ARRAY
+----------------------------------------------------------
+----------------------------------------------------------
+strings 0
+numbers 2
+userfunctions 0
+libfunctions 0
+code :4
+localsize :0
+instructions 12
+----------------------------------------------------------
+0		IF_LESS				01(global), 0:i			04(num), 0:10		00(label), 3	Line: 1
+1		ASSIGN				01(global), 1:_tmp0		06(boolean), false	Line: 1
+2		JUMP				00(label), 4	Line: 1
+3		ASSIGN				01(global), 1:_tmp0		06(boolean), true	Line: 1
+4		IF_EQ				01(global), 1:_tmp0		06(boolean), true		00(label), 6	Line: 1
+5		JUMP				00(label), 9	Line: 1
+6		ASSIGN				01(global), 2:_tmp1		01(global), 0:i	Line: 2
+7		ADD					01(global), 0:i		01(global), 0:i			04(num), 1:1	Line: 2
+8		JUMP				00(label), 0	Line: 3
+9		ASSIGN				01(global), 3:x			04(num), 1:1	Line: 4
+10		ASSIGN				01(global), 4:_tmp2		01(global), 3:x	Line: 4
+11		NOP			Line: 4

@@ -1,0 +1,55 @@
+amvbinary_file 	340
+globals 	16
+STRING_ARRAY
+----------------------------------------------------------
+0		"\n"
+1		"(zero)"
+2		"(one)"
+NUMBER_ARRAY 2
+----------------------------------------------------------
+0		1.000000
+1		20.000000
+FUNCTION_ARRAY
+----------------------------------------------------------
+0		:address 3, local size 5, id "F"
+1		:address 12, local size 1, id "F"
+LIBFUNCS_ARRAY
+----------------------------------------------------------
+0		 "print"
+----------------------------------------------------------
+strings 3
+numbers 2
+userfunctions 2
+libfunctions 1
+code :24
+localsize :0
+instructions 28
+----------------------------------------------------------
+0		ASSIGN				01(global), 0:nl		05(string), 0:"\n"	Line: 8
+1		ASSIGN				01(global), 1:_tmp0		01(global), 0:nl	Line: 8
+2		JUMP				00(label), 22	Line: 10
+3		ENTERFUNC				08(userfunc), 0:F	Line: 10
+4		PUSHARG			05(string), 1:"(zero)"	Line: 11
+5		CALLFUNC			09(libfunc), 0:print	Line: 11
+6		ASSIGN				03(local), 0:_tmp1		10(retval)	Line: 11
+7		ASSIGN				03(local), 1:sadsdads			04(num), 0:1.000000	Line: 12
+8		ASSIGN				03(local), 2:_tmp2		03(local), 1:sadsdads	Line: 12
+9		ASSIGN				03(local), 3:assaadpasdp			04(num), 1:20.000000	Line: 13
+10		ASSIGN				03(local), 4:_tmp3		03(local), 3:assaadpasdp	Line: 13
+11		JUMP				00(label), 19	Line: 14
+12		ENTERFUNC				08(userfunc), 1:F	Line: 14
+13		PUSHARG			05(string), 2:"(one)"	Line: 15
+14		CALLFUNC			09(libfunc), 0:print	Line: 15
+15		ASSIGN				03(local), 0:_tmp4		10(retval)	Line: 15
+16		ASSIGN				10(retval)			04(num), 0:1.000000	Line: 16
+17		JUMP				00(label), 18	Line: 16
+18		EXITFUNC				08(userfunc), 1:F	Line: 17
+19		ASSIGN				10(retval)		08(userfunc), 1:F	Line: 18
+20		JUMP				00(label), 21	Line: 18
+21		EXITFUNC				08(userfunc), 0:F	Line: 19
+22		CALLFUNC			08(userfunc), 0:F	Line: 21
+23		ASSIGN				01(global), 2:_tmp7		10(retval)	Line: 21
+24		PUSHARG			01(global), 0:nl	Line: 22
+25		CALLFUNC			09(libfunc), 0:print	Line: 22
+26		ASSIGN				01(global), 3:_tmp8		10(retval)	Line: 22
+27		NOP			Line: 24

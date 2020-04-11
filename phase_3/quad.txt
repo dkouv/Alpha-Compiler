@@ -1,0 +1,11 @@
+0: ASSIGN i , 0
+1: ASSIGN _tmp0 , i
+2: IF_LESS i, 100, 5
+3: ASSIGN _tmp1 , FALSE
+4: JUMP 6
+5: ASSIGN _tmp1 , TRUE
+6: IF_EQ _tmp1, TRUE, 10
+7: JUMP 11
+8: ADD i i, 1
+9: JUMP 2
+10: JUMP 8

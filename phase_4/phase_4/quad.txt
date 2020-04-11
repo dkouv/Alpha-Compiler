@@ -1,0 +1,25 @@
+0: ASSIGN nl , \n
+1: ASSIGN _tmp0 , nl
+2: FUNCSTART F
+3: PARAM "(zero)"
+4: CALL "print"
+5: GETRETVAL _tmp1
+6: ASSIGN sadsdads , 1
+7: ASSIGN _tmp2 , sadsdads
+8: ASSIGN assaadpasdp , 20
+9: ASSIGN _tmp3 , assaadpasdp
+10: FUNCSTART F
+11: PARAM "(one)"
+12: CALL "print"
+13: GETRETVAL _tmp4
+14: RETURN 1
+15: JUMP 17
+16: FUNCEND F
+17: RETURN F
+18: JUMP 20
+19: FUNCEND F
+20: CALL F
+21: GETRETVAL _tmp7
+22: PARAM nl
+23: CALL "print"
+24: GETRETVAL _tmp8

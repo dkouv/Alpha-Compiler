@@ -1,0 +1,37 @@
+0: FUNCSTART fibo
+1: IF_EQ x, 0, 4
+2: ASSIGN _tmp0 , FALSE
+3: JUMP 5
+4: ASSIGN _tmp0 , TRUE
+5: IF_EQ _tmp0, TRUE, 7
+6: JUMP 9
+7: RETURN 0
+8: JUMP 10
+9: IF_EQ x, 1, 12
+10: ASSIGN _tmp2 , FALSE
+11: JUMP 13
+12: ASSIGN _tmp2 , TRUE
+13: IF_EQ _tmp2, TRUE, 15
+14: JUMP 17
+15: RETURN 1
+16: JUMP 18
+17: SUB _tmp4 x, 1
+18: PARAM _tmp4
+19: CALL fibo
+20: GETRETVAL _tmp5
+21: SUB _tmp6 x, 2
+22: PARAM _tmp6
+23: CALL fibo
+24: GETRETVAL _tmp7
+25: ADD _tmp8 _tmp5, _tmp7 
+26: RETURN _tmp8
+27: JUMP 29
+28: FUNCEND fibo
+29: PARAM 12
+30: CALL fibo
+31: GETRETVAL _tmp10
+32: PARAM "<\n"
+33: PARAM _tmp10
+34: PARAM "fibonacci(12) nust be 144: > "
+35: CALL "print"
+36: GETRETVAL _tmp11

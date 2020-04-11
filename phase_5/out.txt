@@ -1,0 +1,59 @@
+Magicnumber: 340
+GLOBALS :1
+total strings: 0
+total numbers: 4
+total userfunctions: 1
+total libfuncs: 2
+SIZE :8
+SIZE :5
+CODE :5
+LOCAL SIZE :0
+INSTUCTIONS :18
+[33m#0 [0mJUMP label 12 unused unused Line 1 
+[33m#1 [0mENTERFUNC userfunc b unused unused Line 1 
+[33m#2 [0mPUSHARG value: 50.000000 unused unused Line 2 
+[33m#3 [0mPUSHARG value: 1.000000 unused unused Line 2 
+[33m#4 [0mCALLFUNC libfunc: argument unused unused Line 2 
+[33m#5 [0mASSIGN scope 1:name _tmp0 retval unused Line 2 
+[33m#6 [0mASSIGN scope 0:name c scope 1:name _tmp0 unused Line 2 
+[33m#7 [0mASSIGN scope 2:name _tmp1 scope 0:name c unused Line 2 
+[33m#8 [0mPUSHARG scope 0:name c unused unused Line 3 
+[33m#9 [0mCALLFUNC libfunc: print unused unused Line 3 
+[33m#10 [0mASSIGN scope 3:name _tmp2 retval unused Line 3 
+[33m#11 [0mEXITFUNC userfunc b unused unused Line 4 
+[33m#12 [0mPUSHARG value: 20.000000 unused unused Line 5 
+[33m#13 [0mPUSHARG value: 25.000000 unused unused Line 5 
+[33m#14 [0mPUSHARG value: 1.000000 unused unused Line 5 
+[33m#15 [0mCALLFUNC userfunc b unused unused Line 5 
+[33m#16 [0mASSIGN scope 0:name _tmp3 retval unused Line 5 
+[33m#17 [0mNOP unused unused unused Line 5 
+[35mREGISTERING :print
+[0m[35mREGISTERING :input
+[0m[35mREGISTERING :objectmemberkeys
+[0m[35mREGISTERING :objectcopy
+[0m[35mREGISTERING :totalarguments
+[0m[35mREGISTERING :argument
+[0m[35mREGISTERING :typeof
+[0m[35mREGISTERING :strtonum
+[0m[35mREGISTERING :sqrt
+[0m[35mREGISTERING :cos
+[0m[35mREGISTERING :sin
+[0m[35mBAINW SE FUNCTION :1
+[0m4083
+5
+2
+1
+50
+0
+0
+0
+0
+0
+4094
+16
+3
+1
+25
+20
+0
+Index 4096 out of bounds for vector of size 4096

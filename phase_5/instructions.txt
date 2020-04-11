@@ -1,0 +1,66 @@
+amvbinary_file 	340
+globals 	14
+STRING_ARRAY
+----------------------------------------------------------
+0		"<\n"
+1		"fibonacci(12) nust be 144: > "
+NUMBER_ARRAY 4
+----------------------------------------------------------
+0		0.000000
+1		1.000000
+2		2.000000
+3		12.000000
+FUNCTION_ARRAY
+----------------------------------------------------------
+0		:address 1, local size 7, id "fibo"
+LIBFUNCS_ARRAY
+----------------------------------------------------------
+0		 "print"
+----------------------------------------------------------
+strings 2
+numbers 4
+userfunctions 1
+libfunctions 1
+code :12
+localsize :0
+instructions 39
+----------------------------------------------------------
+0		JUMP				00(label), 30	Line: 1
+1		ENTERFUNC				08(userfunc), 0:fibo	Line: 1
+2		IF_EQ				02(formal), 0:x			04(num), 0:0.000000		00(label), 5	Line: 3
+3		ASSIGN				03(local), 0:_tmp0		06(boolean), false	Line: 3
+4		JUMP				00(label), 6	Line: 3
+5		ASSIGN				03(local), 0:_tmp0		06(boolean), true	Line: 3
+6		IF_EQ				03(local), 0:_tmp0		06(boolean), true		00(label), 8	Line: 3
+7		JUMP				00(label), 10	Line: 3
+8		ASSIGN				10(retval)			04(num), 0:0.000000	Line: 4
+9		JUMP				00(label), 29	Line: 4
+10		IF_EQ				02(formal), 0:x			04(num), 1:1.000000		00(label), 13	Line: 5
+11		ASSIGN				03(local), 2:_tmp2		06(boolean), false	Line: 5
+12		JUMP				00(label), 14	Line: 5
+13		ASSIGN				03(local), 2:_tmp2		06(boolean), true	Line: 5
+14		IF_EQ				03(local), 2:_tmp2		06(boolean), true		00(label), 16	Line: 5
+15		JUMP				00(label), 18	Line: 5
+16		ASSIGN				10(retval)			04(num), 1:1.000000	Line: 6
+17		JUMP				00(label), 29	Line: 6
+18		SUB		03(local), 4:_tmp4		02(formal), 0:x			04(num), 1:1.000000	Line: 8
+19		PUSHARG			03(local), 4:_tmp4	Line: 8
+20		CALLFUNC			08(userfunc), 0:fibo	Line: 8
+21		ASSIGN				03(local), 5:_tmp5		10(retval)	Line: 8
+22		SUB		03(local), 6:_tmp6		02(formal), 0:x			04(num), 2:2.000000	Line: 8
+23		PUSHARG			03(local), 6:_tmp6	Line: 8
+24		CALLFUNC			08(userfunc), 0:fibo	Line: 8
+25		ASSIGN				03(local), 7:_tmp7		10(retval)	Line: 8
+26		ADD					03(local), 8:_tmp8		03(local), 5:_tmp5		03(local), 7:_tmp7	Line: 8
+27		ASSIGN				10(retval)		03(local), 8:_tmp8	Line: 8
+28		JUMP				00(label), 29	Line: 8
+29		EXITFUNC				08(userfunc), 0:fibo	Line: 9
+30		PUSHARG				04(num), 3:12.000000	Line: 11
+31		CALLFUNC			08(userfunc), 0:fibo	Line: 11
+32		ASSIGN				01(global), 0:_tmp10		10(retval)	Line: 11
+33		PUSHARG			05(string), 0:"<\n"	Line: 11
+34		PUSHARG			01(global), 0:_tmp10	Line: 11
+35		PUSHARG			05(string), 1:"fibonacci(12) nust be 144: > "	Line: 11
+36		CALLFUNC			09(libfunc), 0:print	Line: 11
+37		ASSIGN				01(global), 1:_tmp11		10(retval)	Line: 11
+38		NOP			Line: 12
